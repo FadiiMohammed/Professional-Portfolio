@@ -1,0 +1,416 @@
+:root {
+  --main-color: #56b887;
+  --card-bg: #333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--main-color);
+}
+a {
+  text-decoration: none;
+}
+.overlay {
+  z-index: -1;
+}
+@media screen and (max-width: 1024) {
+  header {
+    width: 100%;
+    padding: 0;
+  }
+}
+/**************** Spinner Style  ******************/
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: var(--main-color);
+  border: none;
+}
+.nav-link:focus,
+.nav-link:hover {
+  color: #fff;
+  background-color: var(--main-color);
+}
+.nav-link {
+  color: var(--main-color);
+}
+
+.loading-spinner {
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+.spinner {
+  background-color: #222;
+  margin: 100px auto;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  text-align: center;
+  -webkit-animation: sk-rotate 2s infinite linear;
+  animation: sk-rotate 2s infinite linear;
+}
+
+.dot1,
+.dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #56b887;
+  border-radius: 100%;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes sk-rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+/*********************** About Style ***********************/
+::-webkit-scrollbar {
+  width: 5px;
+  border-color: #969798;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #969798;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #969798;
+}
+
+.background {
+  background: url(../images/main_bg.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hf-bg {
+  left: calc(324px + 120px);
+  opacity: 0.7;
+  background: linear-gradient(#333, #222);
+}
+.my-photo img {
+  border: 4px solid #56b887;
+}
+.social-links a {
+  text-decoration: none;
+  color: white;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.social-links i {
+  cursor: pointer;
+  z-index: 999;
+}
+.social-links i:hover {
+  color: var(--main-color);
+}
+.CV-btn {
+  color: white;
+  border-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.CV-btn:hover {
+  background-color: white;
+  color: transparent;
+}
+.portfolio {
+  background-color: #222;
+}
+.carousel-item {
+  padding: 50px 0;
+  background-color: #222;
+  max-height: calc(100vh - 76px);
+  overflow-y: auto;
+}
+
+.personal-data .btn:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+.personal-photo img {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 15%;
+}
+
+.carousel-indicators [data-bs-target] {
+  all: unset;
+  color: white;
+  cursor: pointer;
+}
+.carousel-indicators {
+  position: absolute;
+  background-color: #222;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: calc(100% - 50px);
+  transform: translateY(-100%);
+  transition: 1s;
+  box-shadow: 0px 1px 5px rgb(100 100 100 / 15%);
+}
+.portfolio:hover .carousel-indicators {
+  transform: translateY(0);
+}
+.fixedBarBtn {
+  display: none;
+  z-index: 9;
+}
+.carousel-indicators button {
+  margin: 0 20px;
+}
+.carousel-indicators button:hover {
+  color: var(--main-color);
+}
+.sidebar {
+  background-color: #222;
+  box-shadow: 0 0 20px -5px #fefefe26;
+}
+.card {
+  background-color: var(--card-bg);
+  color: white;
+  transition: 0.5s;
+  padding: 20px 10px;
+}
+.card:hover {
+  transform: translateY(-5%);
+}
+/*************************** Contact Style  ************************/
+.contact-card1,
+.contact-card2 {
+  position: relative;
+}
+.card i {
+  position: absolute;
+  color: var(--main-color);
+  opacity: 30%;
+  top: -10px;
+  right: -10px;
+  font-size: 72px;
+}
+.contact-card1 i {
+  rotate: -20deg;
+}
+.contact-card2 i {
+  rotate: 20deg;
+}
+#contact {
+  height: 100%;
+}
+.form-control {
+  border: 2px solid #444;
+  border-radius: 5px;
+  display: block;
+  font-size: 1em;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  padding: 10px 25px 10px 12px;
+  width: 100%;
+  background: 0 0;
+  background-color: transparent;
+  text-align: left;
+  color: inherit;
+  outline: none;
+  font-family: "Poppins", Helvetica, sans-serif;
+  box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.1);
+}
+.form-control:focus {
+  box-shadow: none;
+  border: 2px solid #56b887;
+  background-color: #222;
+  color: white;
+}
+.form-control::placeholder {
+  color: white !important;
+  opacity: 0.7 !important;
+}
+/*********************** Portfolio Style ***********************/
+.project {
+  height: 250px;
+  border-radius: 10%;
+  position: relative;
+}
+.projectImg {
+  transition: 2s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.card-bg {
+  background-color: var(--card-bg);
+  z-index: 999;
+}
+.project:hover .projectImg {
+  transform: translateY(-100%);
+}
+
+.progress {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  margin: 0 0 20px 0;
+  height: 10px;
+  width: 100%;
+}
+
+.portfolio-content span {
+  color: #88888888;
+}
+
+.html-value,
+.css-value,
+.js-value,
+.angular-value,
+.react-value,
+.bootstrap-value,
+.jquery-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #56b887;
+  border-radius: 100px;
+  background: var(--main-color);
+  height: 10px;
+  width: 0;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.html-value {
+  animation: html 3s normal forwards;
+}
+@keyframes html {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+.react-value {
+  animation: react 3s normal forwards;
+}
+@keyframes react {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 85%;
+  }
+}
+.angular-value {
+  animation: angular 3s normal forwards;
+}
+@keyframes angular {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+.css-value {
+  animation: css 3s normal forwards;
+}
+@keyframes css {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+.js-value {
+  animation: js 3s normal forwards;
+}
+@keyframes js {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 85%;
+  }
+}
+.bootstrap-value {
+  animation: bootstrap 3s normal forwards;
+}
+@keyframes bootstrap {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 90%;
+  }
+}
+.jquery-value {
+  animation: jquery 3s normal forwards;
+}
+@keyframes jquery {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+.knowledges li {
+  display: inline-block;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 25px;
+  margin: 3px 0;
+  padding: 1px 12px;
+  font-size: 13;
+}
